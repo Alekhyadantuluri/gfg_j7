@@ -1,0 +1,8 @@
+class Solution:
+    def numOfWays(self, n : int) -> int:
+        # code here
+        if n%2 !=0 or n<=4:
+            return 0
+        else:
+            return (((n//2)-1)//2)*6
+        
