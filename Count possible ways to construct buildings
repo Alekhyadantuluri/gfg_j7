@@ -1,0 +1,14 @@
+class Solution:
+	def TotalWays(self, N):
+		# Code here
+		if N == 1:
+		    return 4
+		elif N == 2:
+		    return 9
+		else:
+		    a,b=2,3
+		    for i in range(N-2):
+		        c=(a+b)%1000000007
+		        a=b
+		        b=c
+		    return (c*c)%1000000007
