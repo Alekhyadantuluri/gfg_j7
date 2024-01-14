@@ -8,18 +8,18 @@ class Solution
 	public:
 		long long int PowMod(long long int x,long long int n,long long int m)
 		{
-		    long long int ans = 1; 
+		    long long int ans = 1;
 		    while(n){
 		        if (n&1){
 		            n = n - 1;
 		            ans = (ans*x)%m;
 		        }
 		        else{
-		            n = n / 2;
-		            x = (x * x)%m;
+		            n = n /2;
+		            x = (x*x)%m;
 		        }
 		    }
-		    return ans % m;
+		    return ans;
 		}
 };
 
