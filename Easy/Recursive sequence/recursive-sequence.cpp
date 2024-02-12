@@ -16,10 +16,10 @@ int mod = 1000000007;
         for(int i = 1; i < n+1; i++){
             long long p=1;
             for(int j = 0; j < i; j++){
-                p=(p*k)%mod;
+                p=(p%mod*k%mod)%mod;
                 k+=1;
             }
-            s=(s+p)%mod;
+            s=(s%mod+p%mod)%mod;
         }
         return s;
         
