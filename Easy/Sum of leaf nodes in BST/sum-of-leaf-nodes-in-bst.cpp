@@ -37,19 +37,17 @@ struct Node{
 class Solution
 {
     public:
-    int c=0;
+    int c = 0;
         /*You are required to complete below method */
         int sumOfLeafNodes(Node *root ){
              /*Your code here */
-             if (root == NULL) return 0;
-             if (root->left == NULL and root->right == NULL){
+             if(root == NULL) return 0;
+             if(root->left == NULL and root->right == NULL){
                  c+=root->data;
              }
              sumOfLeafNodes(root->left);
              sumOfLeafNodes(root->right);
              return c;
-             
-             
         }
 };
 
