@@ -6,13 +6,10 @@ using namespace std;
 class Solution
 {
     public:
-    int maximize(int num){
-        if(num<=11) return num;
-        return max(maximize(num/2)+maximize(num/3)+maximize(num/4),num);
-    }
         int maxSum(int n)
         {
-            return maximize(n);
+            if (n<=11) return n;
+            return max(maxSum(n/2)+maxSum(n/3)+maxSum(n/4),n);
         }
 };
 
