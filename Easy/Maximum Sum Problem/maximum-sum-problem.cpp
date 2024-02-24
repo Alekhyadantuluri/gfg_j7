@@ -8,8 +8,7 @@ class Solution
     public:
     int maximize(int num){
         if(num<=11) return num;
-        int a = maximize(num/2)+maximize(num/3)+maximize(num/4);
-        return max(a,num);
+        return max(maximize(num/2)+maximize(num/3)+maximize(num/4),num);
     }
         int maxSum(int n)
         {
